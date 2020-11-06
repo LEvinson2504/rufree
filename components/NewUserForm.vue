@@ -1,7 +1,10 @@
 <template>
   <v-container>
     <v-form>
-      <v-text-field v-model="username"></v-text-field>
+      <v-text-field
+        v-model="username"
+        :placeholder="`Enter your name`"
+      ></v-text-field>
       <v-checkbox
         v-model="isonline"
         :label="`Online: ${isonline}`"
