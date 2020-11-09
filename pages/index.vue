@@ -54,7 +54,7 @@ export default Vue.extend({
   },
   created() {
     this.fetchUsers()
-    this.timer = setInterval(this.fetchUsers, 10000)
+    this.timer = setInterval(this.fetchUsers, 20000)
   },
   methods: {
     fetchUsers() {
@@ -63,8 +63,8 @@ export default Vue.extend({
         .get()
         .then((querySnapshot) => {
           querySnapshot.forEach((doc) => {
-            console.log(`${doc.id} => ${doc.data()}`)
-            console.dir(doc.data())
+            // console.log(`${doc.id} => ${doc.data()}`)
+            // console.dir(doc.data())
             this.users.push(doc.data())
           })
         })
